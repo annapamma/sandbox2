@@ -1,0 +1,14 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: "circleci/node:9.6.1"
+    steps:
+      - run: echo 'hello world'
+# MAKE A PR
+
+workflows:
+  test:
+    jobs:
+      - build
